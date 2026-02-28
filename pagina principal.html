@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroGestión360 - Sostenibilidad Agrícola</title>
+   
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+    <div class="logo">AgroGestión<span>360</span></div>
+    <ul class="nav-links">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Buenas prácticas</a></li>
+        <li><a href="#">Medio ambiente</a></li>
+        <li><a href="#">Módulos del sistema</a></li>
+    </ul>
+    <a href="#" class="btn-login">Iniciar Sesión</a>
+</nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Comprometidos con la sostenibilidad agrícola y pecuaria</h1>
+                <p>En AgroGestión360 promovemos el uso responsable de insumos como insecticidas, fungicidas y
+                    herbicidas, priorizando prácticas que protejan la biodiversidad y los ciclos naturales.</p>
+            </div>
+
+        </section>
+
+        <section class="practices">
+            <h2>Buenas prácticas agrícolas y pecuarias</h2>
+            <div class="card-container">
+                <div class="card">
+                    <i class="fas fa-seedling icon-green"></i>
+                    <h3>Uso racional de fertilizantes</h3>
+                    <p>Prevención excesiva para mantener la fertilidad del suelo y la protección de recursos hídricos.
+                    </p>
+                    <button class="btn-card" onclick="mostrarInfo('fertilizantes')">Ver más</button>
+                </div>
+                <div class="card">
+                    <i class="fas fa-bug icon-green"></i>
+                    <h3>Manejo integrado de plagas</h3>
+                    <p>Combinando técnicas biológicas y culturales para el uso responsable de productos.</p>
+                    <button class="btn-card" onclick="mostrarInfo('plagas')">Ver más</button>
+                </div>
+                <div class="card">
+                    <i class="fas fa-tint icon-green"></i>
+                    <h3>Conservación de agua</h3>
+                    <p>Protección de fuentes de agua frente a contaminación y el uso eficiente de irrigación.</p>
+                    <button class="btn-card" onclick="mostrarInfo('agua')">Ver más</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 AgroGestión 360 | Política de privacidad | Términos y condiciones</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

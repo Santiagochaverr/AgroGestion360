@@ -1,0 +1,152 @@
+:root {
+    --verde-principal: #2baf2b;
+    --verde-claro: #7baf37;
+    --texto-oscuro: #333;
+    --blanco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--blanco);
+    color: var(--texto-oscuro);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: var(--blanco);
+    /* Añadimos la línea verde aquí abajo */
+    border-bottom: 3px solid #2ecc71; 
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--verde-principal);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--texto-oscuro);
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+    gap: 40px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+/* Cards Section */
+.practices {
+    padding: 60px 8%;
+    text-align: center;
+    background-color: var(--blanco);
+}
+
+.practices h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.icon-green {
+    font-size: 2.5rem;
+    color: var(--verde-principal);
+    margin-bottom: 15px;
+}
+
+.btn-card {
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: var(--verde-principal);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    padding: 40px 8%;
+    border-top: 1px solid #eee;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.social-icons a {
+    color: #333;
+    margin-left: 15px;
+    font-size: 1.2rem;
+}
+.btn-login {
+    background: #2ecc71;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #2ecc71;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: transparent;
+    color: #2ecc71;
+}

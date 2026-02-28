@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroGestion360 · Panel Profesional</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="/css/panel.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header con título y logo -->
+        <header class="dashboard-header">
+            <div class="logo-area">
+                <i class="fas fa-leaf"></i>
+                <h1></h1>
+            </div>
+            <div class="header-actions">
+                <button class="btn-icon"><i class="fas fa-calendar-alt"></i></button>
+                <button class="btn-icon"><i class="fas fa-bell"></i></button>
+                <button class="btn-icon"><i class="fas fa-user-circle"></i></button>
+            </div>
+        </header>
+
+        <!-- Calendario y Tareas (noviembre) -->
+        <div class="grid-main">
+            <!-- Columna izquierda: Calendario + días destacados -->
+            <section class="calendar-section">
+                <div class="card calendar-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-calendar-check"></i> Noviembre 2025</h2>
+                        <span class="badge">L M X J V S D</span>
+                    </div>
+                    <div class="calendar-grid">
+                        <!-- Días del mes (simulación de calendario) -->
+                        <div class="weekdays">
+                            <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span>
+                        </div>
+                        <div class="days">
+                            <span></span><span></span><span></span><span></span><span></span><span>1</span><span>2</span>
+                            <span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                            <span>10</span><span>11</span><span>12</span><span class="highlight">13</span><span class="highlight">14</span>
+                            <span class="highlight">15</span><span class="highlight">16</span><span class="highlight">17</span>
+                            <span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span>
+                            <span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Días específicos (13 al 17) con estilo de chips -->
+                <div class="card days-highlight-card">
+                    <h3>Días clave <span class="tag">Nov 2025</span></h3>
+                    <div class="day-chips">
+                        <span class="chip">Día 13 <i class="fas fa-check-circle"></i></span>
+                        <span class="chip">Día 14 <i class="fas fa-check-circle"></i></span>
+                        <span class="chip">Día 15 <i class="fas fa-clock"></i></span>
+                        <span class="chip">Día 16 <i class="fas fa-clock"></i></span>
+                        <span class="chip">Día 17 <i class="fas fa-exclamation-triangle"></i></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Columna derecha: Tareas "Despasar" y otras acciones -->
+            <section class="tasks-section">
+                <!-- Tarjeta DESPASAR (destacada) -->
+                <div class="card task-card despasar-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-syringe"></i> Despasar <span class="badge urgent">URGENTE</span></h2>
+                        <button class="btn-more"><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                    <div class="task-body">
+                        <p class="task-descrip"><i class="fas fa-cow"></i> Despasar ganado vacuno con ivermectina</p>
+                        <div class="schedule-grid">
+                            <span class="time-badge"><i class="fas fa-clock"></i> 8 AM</span>
+                            <span class="time-badge"><i class="fas fa-clock"></i> 10 AM</span>
+                            <span class="time-badge"><i class="fas fa-clock"></i> 12 PM</span>
+                            <span class="time-badge"><i class="fas fa-clock"></i> 12 PM</span>
+                            <span class="time-badge"><i class="fas fa-clock"></i> 12 PM</span>
+                            <span class="time-badge"><i class="fas fa-clock"></i> 12 PM</span>
+                        </div>
+                        <!-- Nota: en el original aparecen varios "12 PM", los mantenemos igual -->
+                        <div class="task-meta">
+                            <span><i class="fas fa-tag"></i> Sanidad</span>
+                            <span><i class="fas fa-user"></i> Vet. Martínez</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta RODAR CÉSPED -->
+                <div class="card task-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-tractor"></i> Rodar césped</h2>
+                        <button class="btn-more"><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                    <div class="task-body">
+                        <p><i class="fas fa-location-dot"></i> Zona de marcación de ganado</p>
+                        <div class="progress-indicator">
+                            <span>Programado</span>
+                            <i class="fas fa-circle-check" style="color: #2e7d32;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta LAVAR COCHERAS -->
+                <div class="card task-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-water"></i> Lavar cocheras</h2>
+                        <button class="btn-more"><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                    <div class="task-body">
+                        <p><i class="fas fa-piggy-bank"></i> Cocheras de los cerdos</p>
+                        <div class="progress-indicator">
+                            <span>Pendiente</span>
+                            <i class="fas fa-hourglass-half" style="color: #ed6c02;"></i>
+                        </div>
+                        <button class="btn-primary" id="completarLimpieza">
+                            <i class="fas fa-check"></i> Marcomo listo
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer con botones de acción rápida -->
+        <div class="quick-actions">
+            <button class="btn-float" id="refreshBtn"><i class="fas fa-sync-alt"></i> Actualizar</button>
+            <button class="btn-float btn-success" id="addTaskBtn"><i class="fas fa-plus"></i> Nueva tarea</button>
+            <button class="btn-float btn-report"><i class="fas fa-file-pdf"></i> Reporte</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/panel.js"></script>
+</body>
+</html>

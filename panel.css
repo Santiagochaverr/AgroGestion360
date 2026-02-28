@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(145deg, #e0f0e9 0%, #c8e0d4 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+/* Tarjeta principal con vidrio esmerilado */
+.dashboard {
+    max-width: 1300px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 40px;
+    box-shadow: 20px 20px 40px rgba(0, 30, 10, 0.2),
+                -10px -10px 30px rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+/* Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-area i {
+    font-size: 2.5rem;
+    color: #1b5e20;
+    filter: drop-shadow(2px 4px 4px rgba(0,40,0,0.2));
+}
+
+.logo-area h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-icon {
+    background: rgba(255,255,255,0.6);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    color: #1b5e20;
+    cursor: pointer;
+    box-shadow: 6px 6px 12px rgba(0,30,0,0.1), -6px -6px 12px #ffffff;
+    transition: all 0.15s ease;
+}
+
+.btn-icon:hover {
+    background: #2e7d32;
+    color: white;
+    box-shadow: 2px 2px 8px rgba(0,60,0,0.3);
+    transform: scale(0.98);
+}
+
+/* Grid principal */
+.grid-main {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Cards genéricas */
+.card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(4px);
+    border-radius: 32px;
+    padding: 1.5rem 1.8rem;
+    box-shadow: 10px 10px 20px rgba(0, 30, 0, 0.1), -8px -8px 20px #ffffff;
+    border: 1px solid rgba(255,255,255,0.7);
+    margin-bottom: 1.8rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1d3b1d;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+/* Calendario */
+.calendar-grid {
+    width: 100%;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: 600;
+    color: #2e5c2e;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.4rem;
+    text-align: center;
+}
+
+.days span {
+    background: white;
+    padding: 0.6rem 0.2rem;
+    border-radius: 30px;
+    font-weight: 500;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.02), 2px 2px 6px rgba(0,30,0,0.05);
+    color: #1d3b1d;
+}
+
+.days .highlight {
+    background: #1b5e20;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 6px 10px rgba(27,94,32,0.3);
+}
+
+.badge {
+    background: #c8e6c9;
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    color: #1b5e20;
+    font-weight: 600;
+}
+
+/* Días chips */
+.day-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.chip {
+    background: #ffffffcc;
+    padding: 0.6rem 1.2rem;
+    border-radius: 40px;
+    font-weight: 500;
+    box-shadow: 4px 4px 8px rgba(0,30,0,0.05), -4px -4px 8px white;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #1e3a1e;
+    border: 1px solid #dcf2dc;
+}
+
+.chip i {
+    color: #1b5e20;
+}
+
+/* Tarjeta Despasar */
+.despasar-card {
+    border-left: 6px solid #c2185b;
+}
+
+.urgent {
+    background: #ffcdd2;
+    color: #b71c1c;
+}
+
+.task-descrip {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #1d2b1d;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
+
+.time-badge {
+    background: #f1f8e9;
+    padding: 0.5rem;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1e3a1e;
+    border: 1px solid #a5d6a5;
+    box-shadow: inset 0 1px 3px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.task-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    color: #2e5530;
+    font-size: 0.95rem;
+}
+
+.btn-more {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: #558b55;
+    cursor: pointer;
+    padding: 0.3rem 0.8rem;
+    border-radius: 30px;
+}
+
+.btn-more:hover {
+    background: rgba(0,50,0,0.1);
+}
+
+/* Indicadores de progreso */
+.progress-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 1rem 0 1.2rem 0;
+    background: #ebf5eb;
+    padding: 0.6rem 1.2rem;
+    border-radius: 40px;
+    width: fit-content;
+}
+
+.btn-primary {
+    background: #1b5e20;
+    border: none;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 4px 6px 12px rgba(0,40,0,0.3);
+    transition: 0.1s ease;
+    border: 1px solid #61b15a;
+}
+
+.btn-primary:hover {
+    background: #2e7d32;
+    transform: scale(1.02);
+    box-shadow: 6px 8px 14px rgba(0,60,0,0.3);
+}
+
+/* Botones flotantes (quick actions) */
+.quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    border-top: 2px dashed #a8d5a8;
+    padding-top: 2rem;
+}
+
+.btn-float {
+    background: #ffffffdd;
+    backdrop-filter: blur(4px);
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1b5e20;
+    box-shadow: 8px 8px 18px rgba(0,40,0,0.15), -6px -6px 12px white;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid rgba(255,255,255,0.7);
+}
+
+.btn-float:hover {
+    background: #1b5e20;
+    color: white;
+    box-shadow: 4px 6px 10px #1b5e2050;
+}
+
+.btn-success {
+    background: #2e7d32;
+    color: white;
+    box-shadow: 6px 8px 14px #1b5e20;
+}
+
+.btn-success:hover {
+    background: #1b5e20;
+}
+
+.btn-report {
+    background: #795548;
+    color: #efebe9;
+}
+
+.btn-report:hover {
+    background: #5d4037;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .grid-main {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .dashboard {
+        padding: 1.5rem;
+    }
+    .schedule-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-area h1 {
+        font-size: 1.6rem;
+    }
+    .quick-actions {
+        justify-content: center;
+    }
+}
